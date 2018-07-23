@@ -22,6 +22,7 @@ public class Tester {
 
         assertEquals(check, Maker.sort(list));
     }
+
     @Test
     public void check2(){
         list.add(-4);
@@ -38,6 +39,7 @@ public class Tester {
 
         assertEquals(check, Maker.sort(list));
     }
+
     @Test(expected = NullPointerException.class)
     public void check3(){
         list.add(4);
@@ -52,6 +54,35 @@ public class Tester {
         check.add(6);
         check.add(7);
 
+        assertEquals(check, Maker.sort(list));
+    }
+
+    @Test
+    public void check4(){
+        list.add(4);
+        check.add(4);
+
+        assertEquals(check, Maker.sort(list));
+    }
+
+    @Test
+    public void check5(){
+        assertEquals(check, Maker.sort(list));
+    }
+
+    @Test
+    public void check6(){
+        list.add(7);
+        list.add(7);
+        list.add(7);
+        list.add(7);
+        list.add(7);
+
+        check.add(7);
+        check.add(7);
+        check.add(7);
+        check.add(7);
+        check.add(7);
         assertEquals(check, Maker.sort(list));
     }
 }
